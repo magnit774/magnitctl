@@ -29,6 +29,8 @@
         :root {
             --neon-color: #8A2BE2; /* Ярко-фиолетовый */
             --neon-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 40px rgba(138, 43, 226, 0.7);
+            --neon-color-alt: #00ffcc; /* Дополнительный неоновый цвет (для кнопки Login) */
+            --neon-shadow-alt: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px rgba(0, 255, 204, 0.7);
         }
 
         /* Шапка */
@@ -76,32 +78,56 @@
         .logo {
             width: 180px; /* Размер логотипа */
             height: 180px;
-            /* ЛОГОТИП СЮДА */
+        }
+
+        /* Контейнер для кнопок */
+        .button-group {
+            display: flex;
+            gap: 20px; /* Расстояние между кнопками */
+            justify-content: center;
         }
         
-        /* Кнопка "Скачать" */
-        .download-button {
+        /* Общие стили для кнопок */
+        .neon-button {
             display: inline-block;
             padding: 18px 40px;
-            background: var(--neon-color);
-            color: #000000;
             text-decoration: none;
             font-size: 1.6em;
             font-weight: bold;
             border-radius: 2px;
             transition: all 0.4s ease;
-            box-shadow: var(--neon-shadow);
             text-transform: uppercase;
             border: none;
             cursor: pointer;
+            text-align: center;
+        }
+
+        /* Стиль для кнопки DOWNLOAD */
+        .download-button {
+            background: var(--neon-color); /* Фиолетовый/Основной */
+            color: #000000;
+            box-shadow: var(--neon-shadow);
         }
 
         .download-button:hover {
-            background: #BA55D3; /* Более светлый неоновый при наведении */
+            background: #BA55D3;
             box-shadow: 0 0 15px #BA55D3, 0 0 30px #BA55D3;
         }
 
-        /* Секция с функциями */
+        /* Стиль для кнопки LOGIN */
+        .login-button {
+            background: var(--neon-color-alt); /* Зеленый/Альтернативный */
+            color: #000000;
+            box-shadow: var(--neon-shadow-alt);
+        }
+
+        .login-button:hover {
+            background: #33ffff;
+            box-shadow: 0 0 15px #33ffff, 0 0 30px #33ffff;
+        }
+
+
+        /* Секция с функциями (без изменений) */
         .features {
             max-width: 1000px;
             margin-top: 80px;
@@ -148,7 +174,7 @@
         
         /* Нижний колонтитул */
         footer {
-            margin-top: auto; /* Прижимает футер к низу, если контента мало */
+            margin-top: auto; 
             padding: 20px;
             width: 100%;
             border-top: 1px solid #222;
@@ -168,7 +194,15 @@
         <div class="title">MAGNIT CLIENT</div>
         <p class="tagline">// UNDETECTABLE POWER. YOUR GAME CHANGER.</p>
 
-        <a href="#download" class="download-button">INITIATE DOWNLOAD</a>
+        <div class="button-group">
+            <a href="https://magnit774.github.io/magnitctl/login" class="neon-button login-button">
+                LOGIN
+            </a>
+
+            <a href="https://magnit774.github.io/magnitctl/download/MagnitClient.zip" class="neon-button download-button">
+                DOWNLOAD
+            </a>
+        </div>
     </header>
 
     <section class="features">
