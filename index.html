@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnit Client | Undetectable Power</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Основа: Глубокий черный фон */
+        body {
+            font-family: 'Orbitron', sans-serif; /* Футуристичный шрифт */
+            background-color: #050505;
+            color: #eeeeee;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            /* Добавляем паттерн из точек для атмосферы */
+            background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Неоновый цвет акцента (Фиолетовый/Голубой) */
+        :root {
+            --neon-color: #8A2BE2; /* Ярко-фиолетовый */
+            --neon-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 40px rgba(138, 43, 226, 0.7);
+        }
+
+        /* Шапка */
+        header {
+            padding: 60px 20px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контраста */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Заголовок */
+        .title {
+            font-size: 4.5em;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            color: #ffffff;
+            text-shadow: var(--neon-shadow); /* Неоновое свечение */
+            margin-bottom: 5px;
+        }
+        
+        /* Подзаголовок */
+        .tagline {
+            font-size: 1.4em;
+            color: #cccccc;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        /* Контейнер для логотипа */
+        .logo-container {
+            margin-bottom: 30px;
+            border: 3px solid var(--neon-color);
+            box-shadow: var(--neon-shadow);
+            padding: 15px;
+            background-color: #000000;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container:hover {
+            transform: scale(1.05);
+        }
+
+        /* Место для логотипа */
+        .logo {
+            width: 180px; /* Размер логотипа */
+            height: 180px;
+            /* ЛОГОТИП СЮДА */
+        }
+        
+        /* Кнопка "Скачать" */
+        .download-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--neon-color);
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.6em;
+            font-weight: bold;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            box-shadow: var(--neon-shadow);
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-button:hover {
+            background: #BA55D3; /* Более светлый неоновый при наведении */
+            box-shadow: 0 0 15px #BA55D3, 0 0 30px #BA55D3;
+        }
+
+        /* Секция с функциями */
+        .features {
+            max-width: 1000px;
+            margin-top: 80px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .features h2 {
+            width: 100%;
+            font-size: 2.5em;
+            color: var(--neon-color);
+            text-shadow: 0 0 5px var(--neon-color);
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            width: 250px;
+            margin: 20px;
+            padding: 25px;
+            border-top: 3px solid var(--neon-color);
+            background-color: #111111;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9), var(--neon-shadow);
+        }
+
+        .feature-item h3 {
+            color: var(--neon-color);
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px var(--neon-color);
+        }
+
+        .feature-item p {
+            color: #bbbbbb;
+        }
+        
+        /* Нижний колонтитул */
+        footer {
+            margin-top: auto; /* Прижимает футер к низу, если контента мало */
+            padding: 20px;
+            width: 100%;
+            border-top: 1px solid #222;
+            color: #444;
+            font-size: 0.8em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="magnit.png" alt="Логотип Magnit Client" class="logo">
+        </div>
+        
+        <div class="title">MAGNIT CLIENT</div>
+        <p class="tagline">// UNDETECTABLE POWER. YOUR GAME CHANGER.</p>
+
+        <a href="#download" class="download-button">INITIATE DOWNLOAD</a>
+    </header>
+
+    <section class="features">
+        <h2>CORE FEATURES</h2>
+        
+        <div class="feature-item">
+            <h3>LEGIT ANTICHEAT BYPASS</h3>
+            <p>Новейшие алгоритмы обхода, разработанные для максимальной незаметности на любом сервере.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>CRYSTAL GUI</h3>
+            <p>Современный, полностью настраиваемый интерфейс с неоновыми эффектами.</p>
+        </div>
+        
+        <div class="feature-item">
+            <h3>PERFORMANCE</h3>
+            <p>Оптимизированный код, который не снижает ваш FPS. Чистая производительность.</p>
+        </div>
+        
+        <div class="feature-item">
+            <h3>MODULE VARIETY</h3>
+            <p>Более 100 уникальных модулей с гибкой настройкой под ваш стиль игры.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MAGNIT SYSTEMS. All Rights Reserved. | ACCESS GRANTED.</p>
+    </footer>
+
+</body>
+</html>
